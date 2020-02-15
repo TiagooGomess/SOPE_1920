@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
 /*
 --> Example of compilation and execution commands (assuming that there is a file named infile.txt on the same path of the program):
 
-gcc -o alinea_g alinea_g.c -Wall
+gcc -Wall -o alinea_g alinea_g.c
 ./alinea_g infile.txt outfile.txt
 
 

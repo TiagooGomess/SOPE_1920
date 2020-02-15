@@ -23,7 +23,7 @@ int main(void) {
 /*
 --> At the terminal:
 
-gcc -o alinea_a alinea_a.c -Wall
+gcc -Wall -o alinea_a alinea_a.c
 ./alinea_a
 echo $?
 
