@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     atexit(func1);
     atexit(func1); /* It's possible to install a handler more than once */
     
-    //abort(); /* The program stops here and the exit handers are not installed */
+    //abort(); /* The program stops here and the exit handlers are not installed */
     
     printf("Main done!\n");
     return 0;
