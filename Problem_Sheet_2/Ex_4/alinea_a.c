@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
         else if (strcmp(choice, "yes") != 0 && strcmp(choice, "y") != 0) {
             write(STDERR_FILENO, "\nChoice not valid!\n", 19);
             close(fd1);
-            return 2;
+            return 3;
         }   
     }
     close(fd1);
