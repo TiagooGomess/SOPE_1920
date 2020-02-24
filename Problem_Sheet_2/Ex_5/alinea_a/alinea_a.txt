@@ -1,0 +1,6 @@
+Se corrermos primeiro p5a.c e depois p5b.c, no ficheiro ficam só as informações escritas
+pelo p5b.c. O que está a acontecer é que o segundo programa está a escrever nova informação
+por cima do que o primeiro tinha escrito, perdendo-se o que o primeiro programa tinha escrito.
+Note-se que apenas p5a.c pode criar o ficheiro, já que é o único com a flag O_CREAT, pelo que
+se corrermos primeiro p5a.b, como f1.txt ainda não existe, p5a.c não faz nada. Se depois
+corrermos p5b.c, o ficheiro f1.txt será criado e o programa escreverá informação para o ficheiro.
