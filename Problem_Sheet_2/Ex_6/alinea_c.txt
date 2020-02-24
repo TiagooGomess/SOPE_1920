@@ -1,0 +1,13 @@
+-> Para criar um hardlink (no terminal):
+ln temp.txt temp1.txt
+
+-> Para criar um sysbolic link (no terminal):
+ln -s temp.txt temp2.txt
+
+-> Depois de criar um hardlink e um symbolic link na pasta test, correr o programa alinea_b:
+gcc -Wall .o alinea_b alinea_b.c
+./alinea_b test
+
+Quando corremos o programa da alínea b, verificamos que o ficheiro original temp.txt e o hardlink temp1.txt
+têm o mesmo tipo (regular), mesmo i-node e mesmo tamanho. No entanto, o symbolic link tem outro tipo (outro)
+e diferente i-node.

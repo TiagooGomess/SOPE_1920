@@ -1,0 +1,6 @@
+Depois de apagarmos temp.txt, ainda é possível ver o conteúdo do hardlink (temp1.txt), mas já não é possível
+ver o do symbolic link(temp2.txt) ("cat: temp2.txt: No such file or directory").
+Depois de apagarmos o sysbolic link (temp2.txt), ainda é possível ver o conteúdo do hardlink (temp1.txt).
+Isto acontece porque um sysbolic link não contém a informação do ficheiro original, apenas aponta para este,
+pelo que quando se apaga o ficheiro original, fica sem utilidade. Já um hardlink preserva a informação
+do ficheiro original, pelo que se apagarmos o ficheiro original, temos acesso ao seu conteúdo.
