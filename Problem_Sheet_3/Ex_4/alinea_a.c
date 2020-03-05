@@ -2,11 +2,13 @@
 #include "stdio.h"
 #include <sys/types.h>
 #include <unistd.h>
+#include <sys/wait.h> 
 
 int main(void) {
     pid_t pid;
+    int status;
     if ((pid = fork()) > 0) { // processo pai
-        sleep(1); // espera 1 segundo, com o objetivo de o processo filho correr primeiro do que o pai
+        wait(&status); // o processo pai espera pelo processo filho
         write(STDOUT_FILENO, "world!\n", 7);
     }
     else if (pid == 0) { // processo filho

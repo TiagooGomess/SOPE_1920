@@ -5,7 +5,11 @@
 
 int main(void) {
     pid_t pid;
+    pid_t ppid = getppid();
     if ((pid = fork()) == 0) { // processo filho
+        while(getppid() == ppid) {
+            // o processo filho espera que o processo pai acabe
+        }
         write(STDOUT_FILENO, "world!\n", 7);
     }
     else if (pid > 0) { // processo pai
