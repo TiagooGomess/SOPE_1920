@@ -47,7 +47,6 @@ b)
 Quando enviamos o comando kill (sinal SIGTERM) ao processo, este termina.
 
 c)
-a)
 Quando teclamos Ctrl+C, o sinal SIGINT é processado de maneira a esperar 10 segundos. Durante esses 10 segundos,
 quando enviamos o comando kill (signal SIGTERM) ao processo, o handler desse sinal é executado. Para terminar este
 programa, é preciso enviar o comando kill -kill <pid>.
