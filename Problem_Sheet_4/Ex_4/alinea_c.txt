@@ -1,0 +1,2 @@
+Quando fazemos Ctrl+C, terminamos todos os processos, mas se enviarmos o sinal SIGNINT (kill -SIGINT <pid>),
+apenas terminamos o processo pai.
