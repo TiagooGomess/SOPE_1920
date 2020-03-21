@@ -35,6 +35,7 @@ int main(void) {
 }
 
 /*
-A chamada wait obriga o processo pai a esperar que os filhos terminem. Se substituíssemos wait(&status) por
-waitpid(-1,&status,WNOHANG), isso já não aconteceria.
+Em cada chamada wait é apenas libertado um processo, com exceção da última em que nenhum é libertado, pois já não existem mais filhos.
+Como o tempo de execução do processo pai varia bastante, por vezes os seus processos filho ficam largos segundos em estado zombie. Só ao
+fim de no máximo 20 segundos é que um processo defunct pode finalmente deixar de existir.
 */
