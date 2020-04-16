@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-void *PrintHello(void *threadnum) {
+void *printTID(void *threadnum) {
     sleep(1);
     printf("TID: %lu\tNumber: %d\n", pthread_self(), *(int*)threadnum);
     return threadnum;
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     for(t=0; t< num_threads; t++) {
         printf("Creating thread %d\n", t);
         thrArg[t] = t;
-        pthread_create(&threads[t], NULL, PrintHello, (void *)&thrArg[t]);
+        pthread_create(&threads[t], NULL, printTID, (void *)&thrArg[t]);
     }
 
     for(t=0; t< num_threads; t++) {
